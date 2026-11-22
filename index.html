@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenda Moreno | Desenvolvedora Front-End & Creative Developer</title>
+    
+    <!-- Tipografia Expressiva & Moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Ícones Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    
+    <!-- Estilos do Portfólio -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GSAP & ScrollTrigger para animações cinematográficas -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="brenda-os.js" defer></script>
+</head>
+<body>
+    <header id="site-header">
+        <div class="container-header">
+            <div class="identidade">
+                <div class="logo" id="logo">
+                    <a href="#principal" aria-label="Ir para o topo">B.</a>
+                </div>
+                <p>Brenda Moreno</p>
+            </div>
+
+            <div class="acoes-header">
+                <nav aria-label="menu header" class="menu-header">
+                    <a href="#projetos">Projetos</a>
+                    <a href="#tecnologias">Tecnologias</a>
+                    <a href="#sobre">Sobre mim</a>
+                    <a href="#curriculo">Currículo</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+                <button class="btn-tema" id="btn-tema" type="button" aria-label="Alterar tema claro/escuro">
+                    <i class="bi bi-circle-half" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="principal">
+
+        <section id="wrap-hero">
+            <div class="conteudo-hero">
+                <article id="small-alert" class="small-alert">
+                    <i class="pulse-dot" aria-hidden="true"></i>
+                    <p>Em busca de oportunidade em tecnologias!</p>
+                </article>
+
+                <div class="text-inicial">
+                    <h1 class="hero-title" aria-label="Olá, sou a Brenda. Vamos criar?">
+                        <span class="hero-line"><span class="hero-word">Olá,</span> <span class="hero-word">sou</span> <span class="hero-word">a</span></span>
+                        <span class="hero-line"><span class="hero-word hero-name">Brenda.</span></span>
+                        <span class="hero-line"><span class="hero-word destaque-titulo">Vamos criar?</span></span>
+                    </h1>
+
+                    <p class="hero-desc">Transformo curiosidade em código. Sou estudante de ADS e construo projetos para aprender, resolver problemas e tornar a tecnologia mais acessível.</p>
+                </div>
+                
+                <div class="botoes-hero">
+                    <a href="#projetos" class="btn-projects" id="projetos-btn"> 
+                        <span>Explore meus projetos</span>
+                        <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="#sobre" class="btn-history" id="historia">
+                        <span>Conheça minha história</span>
+                        <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span class="small-text">Osasco-SP &bull; Estudante de ADS &bull; Foco em Python e web</span>
+                </div>
+
+                <a href="#projetos" class="scroll-indicator" id="scroll-indicator" aria-label="Rolar para os projetos">
+                    <span class="scroll-indicator-line"></span>
+                    <span class="scroll-indicator-text">Role para explorar</span>
+                    <i class="bi bi-arrow-down" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="area-window" id="hero-window-area">
+                <div class="first-window" id="hero-code-window">
+                    <div class="window-glare" aria-hidden="true"></div>
+                    <div class="cabeçalho-window">
+                        <div class="decoracao">
+                            <i class="op1" aria-hidden="true"></i>
+                            <i class="op2" aria-hidden="true"></i>
+                            <i class="op3" aria-hidden="true"></i>
+                        </div>
+                        <span class="window-title">brenda.py</span>
+                        <i class="window-close" aria-hidden="true">&times;</i>
+                    </div>
+                    
+                    <div class="cod-window">
+                        <pre class="code"><code><span class="comentario"># Um pouco sobre quem eu sou</span>
+<span class="palavra-chave">class</span> <span class="classe-nome">Brenda</span>:
+    nome = <span class="texto-aspas">"Brenda Moreno"</span>
+    formação = <span class="texto-aspas">"ADS São Judas"</span>
+    interesses = [
+        <span class="texto-aspas">"Python"</span>, <span class="texto-aspas">"Web"</span>, <span class="texto-aspas">"Acessibilidade"</span>
+    ]
+        
+    <span class="palavra-chave">def</span> <span class="funcao-nome">próximo_passo</span>(self):
+        <span class="palavra-chave">return</span> <span class="texto-aspas">"Aprender + construir"</span></code></pre>
+                    </div>
+
+                    <div class="terminal-window">
+                        <span class="terminal-prefix">&gt;</span> curiosidade em execução 
+                        <span class="cursor" aria-hidden="true">▋</span>
+                    </div>
+                </div>
+
+                <div class="mensagem-flutuante" id="hero-floating-badge">
+                    <h2>Sempre <br> aprendendo 
+                        <span class="simbolo" aria-hidden="true">✳</span>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <div class="faixa-destaque" id="marquee-faixa" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="conteudo-faixa">
+                    <span><i aria-hidden="true">✳</i> CÓDIGO COM PROPÓSITO</span>
+                    <span><i aria-hidden="true">✳</i> IDEIAS EM CONSTRUÇÃO</span>
+                    <span><i aria-hidden="true">✳</i> UM PROJETO DE CADA VEZ</span>
+                    <span><i aria-hidden="true">✳</i> CREATIVE DEVELOPMENT</span>
+                    <span><i aria-hidden="true">✳</i> PYTHON &amp; INTERFACES</span>
+                </div>
+                <div class="conteudo-faixa" aria-hidden="true">
+                    <span><i aria-hidden="true">✳</i> CÓDIGO COM PROPÓSITO</span>
+                    <span><i aria-hidden="true">✳</i> IDEIAS EM CONSTRUÇÃO</span>
+                    <span><i aria-hidden="true">✳</i> UM PROJETO DE CADA VEZ</span>
+                    <span><i aria-hidden="true">✳</i> CREATIVE DEVELOPMENT</span>
+                    <span><i aria-hidden="true">✳</i> PYTHON &amp; INTERFACES</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="projetos">
+            <div class="bloco-texto">
+                <div class="etiqueta-projects">
+                    <i class="circulo" aria-hidden="true"></i>
+                    <span>01 / PROJETOS SELECIONADOS</span>
+                </div>
+                <h2 class="secao-titulo">Aprender fazendo.</h2>
+            </div>
+
+            <div id="brenda-os-monitor" class="bos-monitor">
+                <div class="bos-bezel">
+                    <div class="bos-bezel-top">
+                        <div class="bos-bezel-dots" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="bos-model-label">BRENDA_OS v1.0</span>
+                        <span class="bos-led" id="bos-led" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="bos-screen" id="bos-screen">
+                        <div class="bos-crt-overlay" aria-hidden="true"></div>
+
+                        <div class="bos-boot" id="bos-boot" aria-hidden="true">
+                            <div class="bos-boot-text">
+                                <p class="bos-boot-title">BRENDA_OS</p>
+                                <p class="bos-boot-ver">v1.0 — Project Explorer</p>
+                                <p class="bos-boot-loading">Carregando projetos<span class="bos-boot-dots">...</span></p>
+                                <div class="bos-boot-bar"><div class="bos-boot-bar-fill"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="bos-desktop" id="bos-desktop">
+                            <div class="bos-taskbar" id="bos-taskbar">
+                                <span class="bos-taskbar-title">📂 BRENDA_OS — Project Explorer</span>
+                                <span class="bos-clock" id="bos-clock"></span>
+                            </div>
+
+                            <div class="bos-icons" id="bos-icons">
+                                <button class="bos-folder" data-folder="python" type="button" aria-label="Abrir pasta 01_PYTHON">
+                                    <span class="bos-folder-icon" aria-hidden="true">📁</span>
+                                    <span class="bos-folder-label">01_PYTHON</span>
+                                </button>
+                                <button class="bos-folder" data-folder="frontend" type="button" aria-label="Abrir pasta 02_WEB">
+                                    <span class="bos-folder-icon" aria-hidden="true">📁</span>
+                                    <span class="bos-folder-label">02_WEB</span>
+                                </button>
+                                <button class="bos-folder" data-folder="engsoft" type="button" aria-label="Abrir pasta 03_SISTEMAS">
+                                    <span class="bos-folder-icon" aria-hidden="true">📁</span>
+                                    <span class="bos-folder-label">03_SISTEMAS</span>
+                                </button>
+                            </div>
+
+                            <div class="bos-trash-zone">
+                                <button class="bos-trash" id="bos-trash" type="button" aria-label="Abrir LIXEIRA">
+                                    <span class="bos-trash-icon" aria-hidden="true">🗑️</span>
+                                    <span class="bos-trash-label">LIXEIRA (<span id="bos-trash-count">0</span>)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bos-windows" id="bos-windows"></div>
+                    </div>
+                </div>
+
+                <div class="bos-stand">
+                    <div class="bos-stand-neck"></div>
+                    <div class="bos-stand-base"></div>
+                </div>
+            </div>
+
+
+            <span class="final-projetos">Explore as pastas para conhecer cada projeto.</span>
+            <div class="linha"></div>
+        </section>
+
+
+
+        <section id="tecnologias">
+
+            <div class="text-tec">
+                <div class="etiqueta-tec">
+                    <i class="circulo" aria-hidden="true"></i>
+                    <span>02 / MINHA CAIXA DE FERRAMENTA</span>
+                </div>
+
+                <div class="text-principal">
+                    <h2>Ideias ganham vida. <br> 
+                        <span class="tec">
+                            Com código.
+                        </span>
+                        <span class="simbolo" aria-hidden="true">✳</span>
+                    </h2>
+                    <span class="descricao-tec">As tecnologias que utilizo e estudo para dar formas às minhas ideias.</span>
+                </div>
+            </div>
+
+            <div class="container-card">
+                <div class="card tec-card">
+                    <div class="card-topo">
+                        <i class="bi bi-code-slash" aria-hidden="true"></i>
+                        <span class="estrelinha" aria-hidden="true">✦</span>
+                    </div>
+
+                    <div class="infos">
+                        <h2>Interfaces Web</h2>
+                        <p>Estrutura, estilo e interação para experiências claras e organizadas.</p>
+                    </div>
+
+                    <ul class="tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+
+                <div class="card tec-card">
+                    <div class="card-topo">
+                        <i class="bi bi-terminal" aria-hidden="true"></i>
+                        <span class="estrelinha" aria-hidden="true">✦</span>
+                    </div>
+
+                    <div class="infos">
+                        <h2>Lógica de dados</h2>
+                        <p>Python como foco de desenvolvimento, com estudos de SQL e Java.</p>
+                    </div>
+
+                    <ul class="tags">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>Agentes IA</li>
+                    </ul>
+                </div>
+
+                <div class="card tec-card">
+                    <div class="card-topo">
+                        <i class="bi bi-tools" aria-hidden="true"></i>
+                        <span class="estrelinha" aria-hidden="true">✦</span>
+                    </div>
+
+                    <div class="infos">
+                        <h2>Ferramentas do dia a dia</h2>
+                        <p>Organização do código, ferramentas diversas, versionamento e ambientes para construir e aprender.</p>
+                    </div>
+
+                    <ul class="tags">   
+                        <li>Git / GitHub</li>
+                        <li>VSCode</li>
+                        <li>PyCharm</li>
+                        <li>TOTVS</li>
+                        <li>Figma</li>
+                        <li>Photoshop</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="linha"></div>
+        </section>
+
+        <section id="sobre" class="sobre-scrapbook">
+            <!-- Parte Superior: Fundo Preto com Estética Scrapbook / Retro OS -->
+            <div class="sobre-topo-bg">
+                <div class="sobre-container">
+                    <div class="sobre-topo-grid">
+                        
+                        <!-- Coluna 1: Janela sobre_mim.exe com Fotografia -->
+                        <div class="sobre-col-foto">
+                            <div class="sobre-janela-foto" id="sobre-janela-foto" role="region" aria-label="Janela de fotografia sobre_mim.exe">
+                                <!-- Fita adesiva branca superior -->
+                                <div class="sobre-tape sobre-tape-top" aria-hidden="true"></div>
+                                
+                                <!-- Três pequenos traços verde-lima no topo -->
+                                <div class="sobre-lime-sparks" aria-hidden="true">
+                                    <span></span><span></span><span></span>
+                                </div>
+
+                                <!-- Barra de título retrô -->
+                                <div class="sobre-foto-titlebar">
+                                    <div class="sobre-foto-title">
+                                        <span class="sobre-ico-folder" aria-hidden="true">📁</span>
+                                        <strong>sobre_mim.exe</strong>
+                                    </div>
+                                    <div class="sobre-win-controls" aria-hidden="true">
+                                        <span class="sw-btn sw-min">_</span>
+                                        <span class="sw-btn sw-max">□</span>
+                                        <span class="sw-btn sw-close">✕</span>
+                                    </div>
+                                </div>
+
+                                <!-- Moldura interna e fotografia -->
+                                <div class="sobre-foto-frame">
+                                    <img src="avatar-brenda.png"
+                                         alt="Ilustração em preto e branco de Brenda Moreno, com cabelo cacheado, óculos e fones"
+                                         class="sobre-foto-img" width="1254" height="1254" loading="lazy">
+                                </div>
+
+                                <!-- Estrela decorativa desenhada à mão -->
+                                <div class="sobre-star-doodle" aria-hidden="true">✦</div>
+
+                                <!-- Etiqueta branca inclinada com código de barras BRENDA_OS -->
+                                <div class="sobre-barcode-tag" aria-hidden="true">
+                                    <div class="barcode-lines">
+                                        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <span class="barcode-text">BRENDA_OS</span>
+                                </div>
+
+                                <!-- Cursor retrô no canto inferior -->
+                                <div class="sobre-cursor-doodle" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+                                        <path d="M4 2 L4 18 L8 14 L12 22 L15 20 L11 12 L18 12 Z" fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Coluna 2: Indicador, Título em destaque e Texto -->
+                        <div class="sobre-col-texto">
+                            <div class="etiqueta-sobre">
+                                <span class="etiqueta-dot" aria-hidden="true"></span>
+                                <span>03 / SOBRE MIM</span>
+                            </div>
+
+                            <h2 class="sobre-titulo">
+                                Minha história ainda<br>
+                                está <span class="sobre-destaque-marca">sendo escrita.<span class="sobre-cursor-blink" aria-hidden="true">_</span></span>
+                            </h2>
+
+                            <div class="sobre-paragrafos">
+                                <p>Sou movida pela curiosidade e pela vontade de transformar desafios em soluções. Atualmente curso Análise e Desenvolvimento de Sistemas e tenho direcionado meus estudos para programação, com foco em Python e desenvolvimento back-end, além de conhecimentos em Java, SQL, JavaScript, Git e GitHub.</p>
+                                <p>Minha trajetória profissional me ensinou a ser responsável, organizada, analítica e a aprender rapidamente. No PCP, desenvolvi ainda mais minha capacidade de lidar com dados, identificar problemas e buscar melhorias nos processos — habilidades que levo diretamente para a tecnologia.</p>
+                                <p>Busco uma oportunidade para provar meu potencial, contribuir com dedicação e transformar conhecimento em resultados reais. Talvez eu ainda esteja no início da minha carreira como desenvolvedora, mas tenho algo que considero essencial: iniciativa, disposição para aprender e determinação para evoluir constantemente.</p>
+                            </div>
+                        </div>
+
+                        <!-- Coluna 3: Janela Rotina.txt -->
+                        <div class="sobre-col-decor">
+                            <div class="sobre-rotina" id="sobre-rotina">
+                                <div class="rotina-header">
+                                    <strong>Rotina.txt</strong>
+                                    <div class="sobre-win-controls" aria-hidden="true">
+                                        <span class="sw-btn sw-max">□</span>
+                                        <span class="sw-btn sw-close">✕</span>
+                                    </div>
+                                </div>
+                                <ul class="rotina-checklist">
+                                    <li><span class="r-check">☑</span> <span>Estudar</span></li>
+                                    <li><span class="r-check">☑</span> <span>Codar</span></li>
+                                    <li><span class="r-check">☑</span> <span>Projetar</span></li>
+                                    <li><span class="r-check">☐</span> <span>Café ☕</span></li>
+                                    <li><span class="r-check">☑</span> <span>Evoluir</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <div class="sobre-trajetoria-win revelar" id="sobre-janela-trajetoria" role="region" aria-label="Minha trajetória">
+                    <div class="trajetoria-titlebar">
+                        <div class="trajetoria-title">
+                            <span class="sobre-ico-folder" aria-hidden="true">📁</span>
+                            <strong>Minha trajetória.txt</strong>
+                        </div>
+                        <div class="trajetoria-win-controls" aria-hidden="true">
+                            <span class="sw-btn sw-min">_</span>
+                            <span class="sw-btn sw-max">□</span>
+                            <span class="sw-btn sw-close">✕</span>
+                        </div>
+                    </div>
+
+                    <div class="trajetoria-body">
+                        <div class="traj-timeline">
+                            <!-- Linha de conexão -->
+                            <div class="traj-line" aria-hidden="true"></div>
+
+                            <!-- Etapa 1 — Formação -->
+                            <div class="traj-step" data-step="1">
+                                <div class="traj-icon-box" aria-hidden="true">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                </div>
+                                <div class="traj-info">
+                                    <strong>ADS • Universidade São Judas</strong>
+                                    <p>Graduação em andamento</p>
+                                </div>
+                            </div>
+
+                            <!-- Etapa 2 — Experiência -->
+                            <div class="traj-step" data-step="2">
+                                <div class="traj-icon-box" aria-hidden="true">
+                                    <i class="bi bi-buildings-fill"></i>
+                                </div>
+                                <div class="traj-info">
+                                    <strong>PCP • TONDO S.A.</strong>
+                                    <p>Processos, planejamento e sistemas</p>
+                                </div>
+                            </div>
+
+                            <!-- Etapa 3 — Evolução -->
+                            <div class="traj-step" data-step="3">
+                                <div class="traj-icon-box traj-code-box" aria-hidden="true">
+                                    <span>&lt;/&gt;</span>
+                                </div>
+                                <div class="traj-info">
+                                    <strong>Aprendizado contínuo</strong>
+                                    <p>Projetos, Python, desenvolvimento web e inglês</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="curriculo">
+            <div class="header-curriculo">
+                <p class="subtitulo-curriculo">MINHA TRAJETÓRIA EM UM SÓ LUGAR</p>
+                <h2>Conheça meu currículo.</h2>
+                <p>Formação, experiências e habilidades para você conhecer melhor o que posso levar para a sua equipe.</p>
+            </div>
+            
+            <div class="download-curriculo">
+                <div class="icone-pdf">
+                    <div class="linhas-pdf"></div>
+                    <span>PDF</span>
+                </div>
+
+                <a href="./Curriculo_Brenda_Moreno.pdf" download="Curriculo_Brenda_Moreno.pdf" class="baixar" id="btn-baixar-curriculo">
+                    <span>Baixar currículo</span>
+                    <i class="bi bi-arrow-down-circle" aria-hidden="true"></i>
+                </a>
+                <span>Currículo em PDF &bull; Download gratuito.</span>
+            </div>
+        </section>
+
+        <section id="contato">
+            <div class="text-contato">
+                <span class="contato-etiqueta">04 / PRÓXIMO PASSO</span>
+
+                <h2>Boas ideias começam <br> com uma conversa.</h2>
+
+                <p>Estou em busca de uma oportunidade para aprender com uma equipe, contribuir com projetos reais e crescer em tecnologia.</p>
+
+                <a href="#projetos" class="btn-conhecer-trabalho">
+                    <span>Conheça meu trabalho</span>
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <div class="op-contao">
+                <div class="accordion-bloco foco-profissional" id="bloco-foco" tabindex="0" role="button" aria-expanded="false">
+                    <div class="accordion-header">
+                        <span class="accordion-icone" aria-hidden="true">▶</span>
+                        <p>Meu foco profissional</p>
+                    </div>
+                    <div class="accordion-conteudo">
+                        <p>Desenvolvimento com foco em Python, construção de interfaces web modernas e acessíveis, modelagem com SQL e aplicação prática de boas práticas de código e agentes inteligentes.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-bloco equipe" id="bloco-equipe" tabindex="0" role="button" aria-expanded="false">
+                    <div class="accordion-header">
+                        <span class="accordion-icone" aria-hidden="true">▶</span>
+                        <p>O que levo para uma equipe</p>
+                    </div>
+                    <div class="accordion-conteudo">
+                        <p>Raciocínio lógico lapidado no PCP (planejamento e controle de produção), organização analítica, facilidade para assimilar novos fluxos com rapidez, comunicação transparente e determinação para evoluir constantemente.</p>
+                    </div>
+                </div>
+
+                <div class="contatos">
+                    <p class="label-contato">E-MAIL</p>
+                    <a href="mailto:brenda.moreno.santos8@gmail.com" class="link-contato">brenda.moreno.santos8@gmail.com</a>
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+
+                    <p class="label-contato">LINKEDIN</p>
+                    <a href="https://www.linkedin.com/in/brenda-moreno-santos/" target="_blank" rel="noopener noreferrer" class="link-contato">Vamos nos conectar</a>
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+
+                    <p class="label-contato">GITHUB</p>
+                    <a href="https://github.com/brendamoreno" target="_blank" rel="noopener noreferrer" class="link-contato">Explore meus repositórios</a>
+                    <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </div>
+
+                <button class="email" id="email" type="button" aria-label="Copiar endereço de e-mail">
+                    <span class="email-texto">Copiar meu e-mail</span>
+                    <span class="email-icone" aria-hidden="true">⧉</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Brenda Moreno • Feito com curiosidade e código </p>
+        <a href="#principal">
+            <span>Voltar ao topo</span>
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+        </a>
+    </footer>
+</body>
+</html>
